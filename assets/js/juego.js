@@ -24,7 +24,11 @@ const crearDeck = () => {
         }
     }
 
-    console.log(deck);
+    console.log(deck); // Muestra la baraja de cartas en orden
+    deck = _.shuffle(deck); // Mezcla de cartas
+    console.log(deck); // Muestra la baraja mezclada
+    return deck;
+
 }
 
-crearDeck();
+crearDeck(); // Llamado a la función para crear la baraja de cartas
