@@ -51,4 +51,18 @@ const pedirCarta = () => {
 
 
 
-pedirCarta(); // Llamado a la función para tomar una carta
+//pedirCarta(); // Llamado a la función para tomar una carta
+
+// pedirCarta(); // Llamado a la función para tomar una carta
+const valorCarta = ( carta ) => {
+    
+    const valor = carta.substring(0, carta.length - 1); // Elimina el último caracter de la carta
+    return ( isNaN( valor)) ?
+            ( valor === 'A') ? 11 : 10
+            : valor * 1;
+    
+
+}
+
+const valor = valorCarta (pedirCarta()); // Llamado a la función para tomar una carta
+console.log({valor}); // Llamado a la función para tomar el valor de una carta
